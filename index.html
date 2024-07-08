@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            background-color: #f8f9f9; /* Light white background */
+        }
+        .calculator {
+            max-width: 300px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-color: #fff; /* White background for calculator */
+        }
+        .display {
+            width: 75%; /* Adjusted width for display */
+            text-align: right;
+            font-size: 1.5rem;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #e8f5e9; /* Light green background for display */
+            color: #2e7d32; /* Dark green text color */
+        }
+        .clear-button {
+            width: 25%; /* Adjusted width for clear button */
+            font-size: 1.2rem;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #c8e6c9; /* Green background for clear button */
+            color: #1b5e20; /* Dark green text color */
+        }
+        .clear-button:hover {
+            background-color: #a5d6a7; /* Slightly darker green on hover */
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .button {
+            width: 23%; /* Adjusted width for buttons */
+            font-size: 1.2rem;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #e0f2f1; /* Light green background for buttons */
+            color: #004d40; /* Dark teal text color */
+        }
+        .button:hover {
+            background-color: #b2dfdb; /* Slightly darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <form id="calculator-form" onsubmit="event.preventDefault();">
+            <div class="row">
+                <input type="text" class="display" id="display" disabled />
+                <input type="button" class="clear-button" id="clear" value="C" />
+            </div>
+            <div class="row">
+                <input type="button" class="button" id="one" value="1" />
+                <input type="button" class="button" id="two" value="2" />
+                <input type="button" class="button" id="three" value="3" />
+                <input type="button" class="button" id="divide" value="/" />
+            </div>
+            <div class="row">
+                <input type="button" class="button" id="four" value="4" />
+                <input type="button" class="button" id="five" value="5" />
+                <input type="button" class="button" id="six" value="6" />
+                <input type="button" class="button" id="multiply" value="*" />
+            </div>
+            <div class="row">
+                <input type="button" class="button" id="seven" value="7" />
+                <input type="button" class="button" id="eight" value="8" />
+                <input type="button" class="button" id="nine" value="9" />
+                <input type="button" class="button" id="subtract" value="-" />
+            </div>
+            <div class="row">
+                <input type="button" class="button" id="zero" value="0" />
+                <input type="button" class="button" id="decimal" value="." />
+                <input type="button" class="button" id="equals" value="=" />
+                <input type="button" class="button" id="add" value="+" />
+            </div>
+        </form>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
