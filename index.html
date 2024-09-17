@@ -5,62 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <style>
-        body {
-            background-color: #f8f9f9; /* Light white background */
-        }
-        .calculator {
-            max-width: 300px;
-            margin: 20px auto;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            background-color: #fff; /* White background for calculator */
-        }
-        .display {
-            width: 75%; /* Adjusted width for display */
-            text-align: right;
-            font-size: 1.5rem;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #e8f5e9; /* Light green background for display */
-            color: #2e7d32; /* Dark green text color */
-        }
-        .clear-button {
-            width: 25%; /* Adjusted width for clear button */
-            font-size: 1.2rem;
-            padding: 10px;
-            text-align: center;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            cursor: pointer;
-            background-color: #c8e6c9; /* Green background for clear button */
-            color: #1b5e20; /* Dark green text color */
-        }
-        .clear-button:hover {
-            background-color: #a5d6a7; /* Slightly darker green on hover */
-        }
-        .row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
-        .button {
-            width: 23%; /* Adjusted width for buttons */
-            font-size: 1.2rem;
-            padding: 10px;
-            text-align: center;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            cursor: pointer;
-            background-color: #e0f2f1; /* Light green background for buttons */
-            color: #004d40; /* Dark teal text color */
-        }
-        .button:hover {
-            background-color: #b2dfdb; /* Slightly darker green on hover */
-        }
+        /* Add these styles in your <style> tag in index.html */
+body {
+    background-color: #f0f2f5; /* Light blueish background */
+}
+
+.calculator {
+    max-width: 300px;
+    margin: 20px auto;
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; /* White background for calculator */
+}
+
+.display {
+    width: 100%; /* Full width */
+    text-align: right;
+    font-size: 1.5rem;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none; /* Remove border */
+    border-radius: 20px;
+    background-color: #3498db; /* Blue background for display */
+    color: #ffffff; /* White text color */
+}
+
+.clear-button {
+    width: 30%;
+    font-size: 1.2rem;
+    padding: 10px;
+    text-align: center;
+    border: none; /* Remove border */
+    border-radius: 100%;
+    cursor: pointer;
+    background-color: #2c3e50; /* Dark background for clear button */
+    color: #ffffff; /* White text color */
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.button {
+    width: 23%; /* Adjust width for buttons */
+    font-size: 1.5rem;
+    padding: 15px;
+    text-align: center;
+    border: none; /* Remove border */
+    border-radius: 50%; /* Rounded buttons */
+    cursor: pointer;
+    background-color: #ecf0f1; /* Light grey background for numeric buttons */
+    color: #2c3e50; /* Dark text color */
+}
+
+.button.operator {
+    background-color: #e74c3c; /* Red for operators */
+    color: #ffffff;
+}
+
+.button.operator#divide {
+    background-color: #3498db; /* Blue */
+}
+
+.button.operator#multiply {
+    background-color: #f1c40f; /* Yellow */
+}
+
+.button.operator#subtract {
+    background-color: #e67e22; /* Orange */
+}
+
+.button.operator#add {
+    background-color: #2ecc71; /* Green */
+}
+
+.button:hover {
+    background-color: #bdc3c7; /* Slightly darker grey on hover */
+}
+
+.button.operator:hover {
+    opacity: 0.8; /* Slight opacity change on hover for operators */
+}
+
     </style>
 </head>
 <body>
@@ -74,25 +103,25 @@
                 <input type="button" class="button" id="one" value="1" />
                 <input type="button" class="button" id="two" value="2" />
                 <input type="button" class="button" id="three" value="3" />
-                <input type="button" class="button" id="divide" value="/" />
+                <input type="button" class="button operator" id="divide" value="/" />
             </div>
             <div class="row">
                 <input type="button" class="button" id="four" value="4" />
                 <input type="button" class="button" id="five" value="5" />
                 <input type="button" class="button" id="six" value="6" />
-                <input type="button" class="button" id="multiply" value="*" />
+                <input type="button" class="button operator" id="multiply" value="*" />
             </div>
             <div class="row">
                 <input type="button" class="button" id="seven" value="7" />
                 <input type="button" class="button" id="eight" value="8" />
                 <input type="button" class="button" id="nine" value="9" />
-                <input type="button" class="button" id="subtract" value="-" />
+                <input type="button" class="button operator" id="subtract" value="-" />
             </div>
             <div class="row">
                 <input type="button" class="button" id="zero" value="0" />
                 <input type="button" class="button" id="decimal" value="." />
                 <input type="button" class="button" id="equals" value="=" />
-                <input type="button" class="button" id="add" value="+" />
+                <input type="button" class="button operator" id="add" value="+" />
             </div>
         </form>
     </div>
